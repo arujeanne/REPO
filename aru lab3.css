@@ -1,19 +1,25 @@
+@media (min-width: 300px) {   
+
 html, body{
     background: linear-gradient( darkslateblue 0%, lightblue 100%);
     color: black;
     font-family: helvetica, serif;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 4em;
+    margin-right: 4em;
        
+}
+
+img {
+    max-width: 100%;
 }
 
 .banner {
     text-align: center;
-    padding: 8px;
-    font-size: 32px;
+    padding: 0.5em;
+    font-size: 3vw;
     font-style: bold;
     font-family:'Courier New', Courier, monospace;
-    height: 48px;
+    height: 10vh;
     color: rgb(173, 137, 197);
     background-image: url(https://images.unsplash.com/photo-1655381453208-4983f2e18fb1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
     
@@ -21,6 +27,7 @@ html, body{
 
 
 .logo {
+    margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -29,39 +36,37 @@ html, body{
 
 
 .menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0.25em;
     text-align: justify;
     cursor: pointer;
-    position: relative;
     list-style-type: none;
-    display: flex;
     list-style: none;
-    color:rgb(19, 18, 30)
- 
+    color:rgb(19, 18, 30);
 }
 
 #aside-content {
-    padding: 25%
-   
-
+    padding: 25%;
 }
+
 .menu li a {
     display: block;
     text-decoration: none;
-    padding: 10px;
-    margin-left: 100px;
-    
+    padding: 0.5em;
+    margin-left: 1.5em;
 }
 
 .menu li a:hover {
     color: rgb(26, 27, 44);
     border: 1px rgb(128, 8, 184);
-    border-radius: 2px;
+    border-radius: 0.2em;
     background-color: rgb(214, 213, 234);
 }
 
 menu [style]{
-    text-size-adjust: 56px;
-    text-shadow: 2px;
+    text-size-adjust: 2em;
+    text-shadow: 0.05em;
     font-style: bold;
 }
 
@@ -83,3 +88,49 @@ menu [style]{
         color: blue;
       }
 
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media only screen and (max-width: 768px){
+    body {
+        width: 100%;
+        margin-right: 2em;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    footer {
+        display: block;
+    }
+
+
+@media only screen and (max-width: 1024px){
+    body {
+        width: 100%;
+        margin-right: 2em;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+}
